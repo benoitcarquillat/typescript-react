@@ -1,17 +1,27 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
+// @ts-ignore
+import { MargaretProvider } from "@tymate/margaret";
+
+import { theme } from "./ui/theme";
+import { GlobalStyles } from "./ui";
+import styled from "styled-components";
+import App from "./App";
+
+const Wrapper = styled.div`
+  margin: 0 auto;
+  max-width: 1000px;
+  padding: 40px;
+`;
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <MargaretProvider theme={theme}>
+      <GlobalStyles />
+      <Wrapper>
+        <App />
+      </Wrapper>
+    </MargaretProvider>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
