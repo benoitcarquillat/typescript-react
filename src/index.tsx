@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 // @ts-ignore
 import { MargaretProvider } from "@tymate/margaret";
-
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { theme } from "./ui/theme";
 import { GlobalStyles } from "./ui";
 import styled from "styled-components";
@@ -19,7 +19,9 @@ ReactDOM.render(
     <MargaretProvider theme={theme}>
       <GlobalStyles />
       <Wrapper>
-        <App />
+        <Router>
+          <App />
+        </Router>
       </Wrapper>
     </MargaretProvider>
   </React.StrictMode>,
