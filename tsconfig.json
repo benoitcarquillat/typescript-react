@@ -2,7 +2,11 @@
   "compilerOptions": {
     "target": "es5",
     "downlevelIteration": true,
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -19,6 +23,8 @@
     "noImplicitAny": false,
     "importHelpers": true
   },
-  "include": ["src"],
+  "include": [
+    "src"
+  ],
   "extends": "./base-tsconfig.json"
 }
