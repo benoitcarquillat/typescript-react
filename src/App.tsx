@@ -1,7 +1,6 @@
 import React from "react";
-
 // ? if you want to keep "noImplicitAny": true from tsconfig
-import "./modules.d";
+// import "./modules.d";
 import { Stack } from "@tymate/margaret";
 // TODO: TS Path not working
 import { InnerComponent } from "./components/InnerComponent";
@@ -13,6 +12,19 @@ const App = () => {
     title: "mon titre",
     id: 1,
   };
+
+  // on peut également remplacer { arg1: string; arg2?: number } par une interface
+  const typeTest = ({
+    arg1,
+    arg2,
+  }: {
+    arg1: string;
+    arg2?: number;
+  }): boolean => {
+    return arg1 === "yolo";
+  };
+
+  typeTest({ arg1: "hello", arg2: 0 });
 
   return (
     <>
