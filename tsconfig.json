@@ -24,7 +24,8 @@
     "importHelpers": true
   },
   "include": [
-    "src"
+    "src",
+    "cypress/integration/app.test.js"
   ],
   "extends": "./base-tsconfig.json"
 }

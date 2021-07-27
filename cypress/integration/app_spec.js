@@ -1,5 +1,4 @@
 /* eslint-disable no-undef */
-Cypress.env();
 
 describe("The Home Page", () => {
   beforeEach("Mock data", () => {});
@@ -15,9 +14,5 @@ describe("The Home Page", () => {
   it("should set search value", () => {
     cy.get('[data-test="input"]').type("Mon super");
     cy.get('[data-test="inputValue"]').contains("Mon super");
-  });
-
-  it("should filter search value", () => {
-    cy.get('[data-test="item"]').should("have.length", 2);
   });
 });
