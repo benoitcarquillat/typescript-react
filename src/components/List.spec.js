@@ -5,7 +5,7 @@ import { MargaretProvider } from "@tymate/margaret";
 import { theme } from "../ui/theme";
 
 describe("List", () => {
-  it("contains the correct number of item", () => {
+  it("contains the correct number of item & filter by label", () => {
     const listItems = [
       { label: "Buy milk", slug: "from" },
       { label: "Learn", slug: "mock" },
