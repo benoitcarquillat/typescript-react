@@ -15,4 +15,13 @@ describe("The Home Page", () => {
     cy.get('[data-test="input"]').type("Mon super");
     cy.get('[data-test="inputValue"]').contains("Mon super");
   });
+
+  it("should load harry potter route", () => {
+    cy.get('[data-test="link"]').click();
+    cy.get('[data-test="characters"]').should("be.visible");
+  });
+
+  it("should intercept get", () => {
+    cy.intercept("GET", "/api/characters/*", { fixture: "list.json" });
+  });
 });

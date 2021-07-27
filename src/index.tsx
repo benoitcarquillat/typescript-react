@@ -7,6 +7,8 @@ import { theme } from "./ui/theme";
 import { GlobalStyles } from "./ui";
 import styled from "styled-components";
 import App from "./App";
+import HarryPotter from "./containers/HarryPotter";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 const Wrapper = styled.div`
   margin: 0 auto;
@@ -19,7 +21,12 @@ ReactDOM.render(
     <MargaretProvider theme={theme}>
       <GlobalStyles />
       <Wrapper>
-        <App />
+        <Router>
+          <Routes>
+            <Route path="/*" element={<App />} />
+            <Route path="/harryup" element={<HarryPotter />} />
+          </Routes>
+        </Router>
       </Wrapper>
     </MargaretProvider>
   </React.StrictMode>,

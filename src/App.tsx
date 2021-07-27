@@ -1,4 +1,3 @@
-import React from "react";
 // ? if you want to keep "noImplicitAny": true from tsconfig
 // import "./modules.d";
 import { Stack } from "@tymate/margaret";
@@ -56,6 +55,9 @@ const App = () => {
         />
       </Stack>
       <List items={items} />
+      <Link style={{ color: "white" }} to="/harryup" data-test="link">
+        API DATA
+      </Link>
     </Stack>
   );
 };

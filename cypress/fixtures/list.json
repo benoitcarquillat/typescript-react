@@ -1,14 +1,14 @@
 [
   {
-    "label": "Mon super titre",
-    "slug": "slug-de-ouf"
+    "name": "Mon super titre",
+    "house": "slug-de-ouf"
   },
   {
-    "label": "Mon super titre mieux",
-    "slug": "slug-de-ouf-encore-plus-ouf-que-l-autre"
+    "name": "Mon super titre mieux",
+    "house": "slug-de-ouf-encore-plus-ouf-que-l-autre"
   },
   {
-    "label": "Rien à voir",
-    "slug": "lui-il-est-pas-ouf"
+    "name": "Rien à voir",
+    "house": "lui-il-est-pas-ouf"
   }
 ]
