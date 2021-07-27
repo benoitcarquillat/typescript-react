@@ -22,7 +22,7 @@ const Input = styled.input`
 
 export const List = ({ items }: { items: ListModel[] }) => {
   const [search, setSearch] = useState("");
-  const displayeditems = items.filter(
+  const displayeditems = (items || []).filter(
     (item) => item.label.indexOf(search) !== -1
   );
 
